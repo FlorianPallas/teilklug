@@ -167,7 +167,7 @@ const containerElement = ref<HTMLElement | null>(null)
 </script>
 
 <template>
-  <main class="flex flex-col h-full max-h-screen">
+  <main class="flex flex-col h-full max-h-screen sm:max-w-md mx-auto">
     <!-- Summary -->
     <ul class="flex flex-col gap-1 mx-4 mt-4">
       <li v-for="user in users" :key="user.id"
@@ -189,7 +189,7 @@ const containerElement = ref<HTMLElement | null>(null)
       </li>
     </ul>
     <!-- Controls -->
-    <div class="bg-gray-800 p-4 flex flex-col gap-4">
+    <div class="bg-gray-800 p-4 flex flex-col gap-4 sm:rounded-t-lg">
       <input @input="onChange" @keydown="onKeydown" @focus="onFocus" ref="inputElement" :value="current.price.toLocaleString('de-DE', {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
